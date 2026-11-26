@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 446" role="img">
+  <title>Event loop: ready queue, thread, waiting</title>
+  <style>
+    :root {
+      --text-primary: #2c2c2a;
+      --text-secondary: #5f5e5a;
+      --border: rgba(0, 0, 0, 0.14);
+      --border-strong: rgba(0, 0, 0, 0.32);
+      --bg-neutral: #f1efe8;
+      --bg-accent: #e6f1fb;
+      --page: #ffffff;
+      --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #f1efe8;
+        --text-secondary: #b4b2a9;
+        --border: rgba(255, 255, 255, 0.16);
+        --border-strong: rgba(255, 255, 255, 0.34);
+        --bg-neutral: #2c2c2a;
+        --bg-accent: #0c447c;
+        --page: #1c1c1a;
+      }
+    }
+    svg {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      user-select: none;
+    }
+    .page-bg { fill: var(--page); }
+    .h1 { fill: var(--text-primary); font-size: 18px; font-weight: 500; }
+    .t { fill: var(--text-primary); font-size: 14px; }
+    .th { fill: var(--text-primary); font-size: 14px; font-weight: 500; }
+    .ts { fill: var(--text-secondary); font-size: 12px; }
+    .arr { stroke: var(--text-secondary); stroke-width: 1.5; fill: none; }
+    .zone { fill: none; stroke: var(--border-strong); stroke-width: 0.75; }
+    .chip { transition: transform .55s ease, opacity .4s ease; }
+    @media (prefers-reduced-motion: reduce) {
+      .chip { transition: none; }
+    }
+    .btn { cursor: pointer; }
+    .btn rect {
+      fill: transparent;
+      stroke: var(--border-strong);
+      stroke-width: 0.75;
+      transition: fill 0.15s ease;
+    }
+    .btn:hover rect { fill: var(--bg-neutral); }
+    .btn text { fill: var(--text-primary); font-size: 14px; pointer-events: none; }
+    .ttl { fill: var(--text-primary); font-size: 15px; font-weight: 500; }
+    .cap { fill: var(--text-secondary); font-size: 14px; }
+    .code-bg { fill: var(--bg-neutral); }
+    .code-txt { fill: var(--text-primary); font-family: var(--font-mono); font-size: 13px; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+  </defs>
+
+  <rect id="page-bg" class="page-bg" x="0" y="0" width="680" height="446" />
+  <text class="h1" x="20" y="30">The event loop, step by step</text>
+
+  <g transform="translate(0, 38)">
+    <text class="th" x="20" y="36">Ready queue</text>
+    <rect class="zone" x="20" y="44" width="240" height="70" rx="8" />
+
+    <text class="th" x="306" y="36">Thread</text>
+    <rect id="thr" class="zone" x="306" y="44" width="110" height="70" rx="8" />
+    <text id="thrs" class="ts" x="361" y="106" text-anchor="middle" dominant-baseline="central">thread idle</text>
+
+    <text class="th" x="442" y="36">Finished</text>
+    <rect class="zone" x="442" y="44" width="210" height="70" rx="8" />
+
+    <text class="th" x="20" y="154">Waiting on IO (not using the thread)</text>
+    <rect class="zone" x="20" y="164" width="632" height="80" rx="8" />
+
+    <line class="arr" x1="262" y1="79" x2="302" y2="79" marker-end="url(#arrow)" />
+    <line class="arr" x1="361" y1="116" x2="361" y2="162" marker-end="url(#arrow)" />
+    <text class="ts" x="372" y="140" dominant-baseline="central">await on unfinished IO: suspend</text>
+    <line class="arr" x1="240" y1="162" x2="240" y2="116" marker-end="url(#arrow)" />
+    <text class="ts" x="230" y="140" text-anchor="end" dominant-baseline="central">response arrives</text>
+
+    <g id="chips"></g>
+  </g>
+
+  
+  <g transform="translate(20, 302)">
+    <g id="back" class="btn" role="button" tabindex="0">
+      <rect x="0" y="0" width="56" height="28" rx="8" />
+      <text x="28" y="14" text-anchor="middle" dominant-baseline="central">Back</text>
+    </g>
+    <g id="next" class="btn" role="button" tabindex="0" transform="translate(66, 0)">
+      <rect x="0" y="0" width="56" height="28" rx="8" />
+      <text x="28" y="14" text-anchor="middle" dominant-baseline="central">Next</text>
+    </g>
+    <g id="play" class="btn" role="button" tabindex="0" transform="translate(132, 0)">
+      <rect x="0" y="0" width="64" height="28" rx="8" />
+      <text id="play-lbl" x="32" y="14" text-anchor="middle" dominant-baseline="central">Pause</text>
+    </g>
+    <g id="reset" class="btn" role="button" tabindex="0" transform="translate(206, 0)">
+      <rect x="0" y="0" width="60" height="28" rx="8" />
+      <text x="30" y="14" text-anchor="middle" dominant-baseline="central">Reset</text>
+    </g>
+    <text id="count" class="ts" x="278" y="14" dominant-baseline="central" style="font-size:13px"></text>
+  </g>
+
+  
+  <g transform="translate(20, 354)">
+    <text id="ttl" class="ttl" x="0" y="0"></text>
+    <text id="cap" class="cap" x="0" y="21"></text>
+    <rect id="code-box" class="code-bg" x="0" y="34" width="640" height="30" rx="8" />
+    <text id="code" class="code-txt" x="10" y="49" dominant-baseline="central"></text>
+  </g>
+
+  <script>
+    const NS = 'http://www.w3.org/2000/svg';
+    const COL = {
+      main: ['#D3D1C7', '#2C2C2A'],
+      A: ['#5DCAA5', '#04342C'],
+      B: ['#AFA9EC', '#26215C'],
+      C: ['#F0997B', '#4A1B0C']
+    };
+    const S = [
+      {q:[],r:'main',w:[],d:[],t:'main is running',c:'It is the only thing on the thread. Nothing else exists yet.',k:'async def main():'},
+      {q:['A','B','C'],r:'main',w:[],d:[],t:'create_task only queues',c:'Three tasks are scheduled. None has started, because main still holds the thread.',k:'tasks = [asyncio.create_task(work(n)) for n in "ABC"]'},
+      {q:['A','B','C'],r:null,w:['main'],d:[],t:'main awaits and suspends',c:'main waits for tasks that are not done, so it steps aside. The thread is free.',k:'results = await asyncio.gather(*tasks)'},
+      {q:['B','C'],r:'A',w:['main'],d:[],t:'The loop takes the front of the queue',c:'A gets the thread and runs its first lines.',k:'# in A: build the request and send it'},
+      {q:['B','C'],r:null,w:['main','A'],d:[],t:'A awaits the network and suspends',c:'The request is out. A has nothing to do until the response arrives, so it leaves the thread.',k:'resp = await client.get(url)   # in A'},
+      {q:['C'],r:'B',w:['main','A'],d:[],t:'Next in line: B',c:'B runs while A waits.',k:'# in B: build the request and send it'},
+      {q:['C'],r:null,w:['main','A','B'],d:[],t:'B suspends too',c:'Two requests are now in flight at once.',k:'resp = await client.get(url)   # in B'},
+      {q:[],r:'C',w:['main','A','B'],d:[],t:'Next in line: C',c:'C runs while A and B wait.',k:'# in C: build the request and send it'},
+      {q:[],r:null,w:['main','A','B','C'],d:[],t:'Everyone is waiting: the thread is idle',c:'All three waits overlap. In the sequential version this time was spent three times over.',k:'# nothing is ready; the loop sleeps until a socket is readable'},
+      {q:['A'],r:null,w:['main','B','C'],d:[],t:'A response arrives',c:'The loop notices the data, and A goes back on the ready queue.',k:'# A is ready again'},
+      {q:[],r:'A',w:['main','B','C'],d:[],t:'A resumes where it left off',c:'It handles the response and returns.',k:'return parse(resp)   # in A'},
+      {q:[],r:null,w:['main','B','C'],d:['A'],t:'A is finished',c:'The result is stored on the task object, so awaiting it again would just read it.',k:"A.result() == 'A'"},
+      {q:['B'],r:null,w:['main','C'],d:['A'],t:'B response arrives',c:'B is back on the queue.',k:'# B is ready again'},
+      {q:[],r:'B',w:['main','C'],d:['A'],t:'B resumes',c:'It handles its response and returns.',k:'return parse(resp)   # in B'},
+      {q:[],r:null,w:['main','C'],d:['A','B'],t:'B is finished',c:'Two of three done.',k:"B.result() == 'B'"},
+      {q:['C'],r:null,w:['main'],d:['A','B'],t:'C response arrives',c:'C is back on the queue.',k:'# C is ready again'},
+      {q:[],r:'C',w:['main'],d:['A','B'],t:'C resumes',c:'It handles its response and returns.',k:'return parse(resp)   # in C'},
+      {q:[],r:null,w:['main'],d:['A','B','C'],t:'All tasks are finished',c:'gather has what it was waiting for, so main can be woken.',k:'# every task passed to gather is done'},
+      {q:['main'],r:null,w:[],d:['A','B','C'],t:'main is ready again',c:'It joins the queue like any other task.',k:'# main is ready again'},
+      {q:[],r:'main',w:[],d:['A','B','C'],t:'main resumes with the results',c:'gather returns them in input order. Total time is about one round trip, not three.',k:"results == ['A', 'B', 'C']"}
+    ];
+
+    const chips = {};
+    const layer = document.getElementById('chips');
+    Object.keys(COL).forEach(id =&gt; {
+      const g = document.createElementNS(NS, 'g');
+      g.setAttribute('class', 'chip');
+      const r = document.createElementNS(NS, 'rect');
+      r.setAttribute('width', 44);
+      r.setAttribute('height', 32);
+      r.setAttribute('rx', 6);
+      r.setAttribute('fill', COL[id][0]);
+      r.setAttribute('stroke', COL[id][1]);
+      r.setAttribute('stroke-width', 0.5);
+      const t = document.createElementNS(NS, 'text');
+      t.setAttribute('class', 'th');
+      t.setAttribute('x', 22);
+      t.setAttribute('y', 16);
+      t.setAttribute('text-anchor', 'middle');
+      t.setAttribute('dominant-baseline', 'central');
+      t.style.fill = COL[id][1];
+      t.textContent = id;
+      g.appendChild(r);
+      g.appendChild(t);
+      layer.appendChild(g);
+      chips[id] = g;
+    });
+
+    function place(id, s) {
+      const qi = s.q.indexOf(id), wi = s.w.indexOf(id), di = s.d.indexOf(id);
+      if (s.r === id) return [339, 63, 1];
+      if (qi &gt;= 0) return [28 + qi * 50, 63, 1];
+      if (wi &gt;= 0) return [28 + wi * 50, 188, 1];
+      if (di &gt;= 0) return [450 + di * 50, 63, 1];
+      return [28, 63, 0];
+    }
+
+    function setWrappedCaption(text) {
+      const capEl = document.getElementById('cap');
+      const codeBox = document.getElementById('code-box');
+      const codeTxt = document.getElementById('code');
+      const svgEl = document.documentElement;
+      const bgEl = document.getElementById('page-bg');
+
+      while (capEl.firstChild) capEl.removeChild(capEl.firstChild);
+
+      if (text.length &lt;= 82) {
+        capEl.textContent = text;
+        codeBox.setAttribute('y', 34);
+        codeTxt.setAttribute('y', 49);
+        svgEl.setAttribute('viewBox', '0 0 680 446');
+        bgEl.setAttribute('height', 446);
+      } else {
+        const mid = text.lastIndexOf(' ', 80);
+        const line1 = text.slice(0, mid);
+        const line2 = text.slice(mid + 1);
+        const t1 = document.createElementNS(NS, 'tspan');
+        t1.setAttribute('x', 0);
+        t1.setAttribute('dy', 0);
+        t1.textContent = line1;
+        const t2 = document.createElementNS(NS, 'tspan');
+        t2.setAttribute('x', 0);
+        t2.setAttribute('dy', 18);
+        t2.textContent = line2;
+        capEl.appendChild(t1);
+        capEl.appendChild(t2);
+        codeBox.setAttribute('y', 52);
+        codeTxt.setAttribute('y', 67);
+        svgEl.setAttribute('viewBox', '0 0 680 464');
+        bgEl.setAttribute('height', 464);
+      }
+    }
+
+    let i = 0, timer = null;
+    function render() {
+      const s = S[i];
+      Object.keys(chips).forEach(id =&gt; {
+        const [p, q, v] = place(id, s);
+        chips[id].style.transform = 'translate(' + p + 'px,' + q + 'px)';
+        chips[id].style.opacity = v;
+      });
+      const busy = s.r !== null;
+      document.getElementById('thr').style.fill = busy ? 'var(--bg-accent)' : 'var(--bg-neutral)';
+      document.getElementById('thrs').textContent = busy ? 'thread busy' : 'thread idle';
+      document.getElementById('ttl').textContent = s.t;
+      setWrappedCaption(s.c);
+      document.getElementById('code').textContent = s.k;
+      document.getElementById('count').textContent = 'Step ' + (i + 1) + ' of ' + S.length;
+    }
+
+    function stop() {
+      clearInterval(timer);
+      timer = null;
+      document.getElementById('play-lbl').textContent = 'Play';
+    }
+
+    function start() {
+      if (i &gt;= S.length - 1) i = 0;
+      render();
+      document.getElementById('play-lbl').textContent = 'Pause';
+      timer = setInterval(() =&gt; {
+        if (i &lt; S.length - 1) {
+          i++;
+          render();
+        } else {
+          stop();
+        }
+      }, 1700);
+    }
+
+    document.getElementById('next').addEventListener('click', () =&gt; { stop(); if (i &lt; S.length - 1) i++; render(); });
+    document.getElementById('back').addEventListener('click', () =&gt; { stop(); if (i &gt; 0) i--; render(); });
+    document.getElementById('reset').addEventListener('click', () =&gt; { stop(); i = 0; render(); });
+    document.getElementById('play').addEventListener('click', () =&gt; { timer === null ? start() : stop(); });
+
+    document.addEventListener('keydown', e =&gt; {
+      if (e.key === 'ArrowRight') { stop(); if (i &lt; S.length - 1) i++; render(); }
+      else if (e.key === 'ArrowLeft') { stop(); if (i &gt; 0) i--; render(); }
+      else if (e.key === ' ') { e.preventDefault(); timer === null ? start() : stop(); }
+    });
+
+    render();
+    setTimeout(start, 700);
+  </script>
+</svg>
