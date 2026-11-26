@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 492" role="img">
+  <title>Process pool: more workers than cores</title>
+  <style>
+    :root {
+      --text-primary: #2c2c2a;
+      --text-secondary: #5f5e5a;
+      --border: rgba(0, 0, 0, 0.14);
+      --border-strong: rgba(0, 0, 0, 0.32);
+      --bg-neutral: #f1efe8;
+      --bg-accent: #e6f1fb;
+      --page: #ffffff;
+      --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #f1efe8;
+        --text-secondary: #b4b2a9;
+        --border: rgba(255, 255, 255, 0.16);
+        --border-strong: rgba(255, 255, 255, 0.34);
+        --bg-neutral: #2c2c2a;
+        --bg-accent: #0c447c;
+        --page: #1c1c1a;
+      }
+    }
+    svg {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      user-select: none;
+    }
+    .page-bg { fill: var(--page); }
+    .h1 { fill: var(--text-primary); font-size: 18px; font-weight: 500; }
+    .th { fill: var(--text-primary); font-size: 14px; font-weight: 500; }
+    .ts { fill: var(--text-secondary); font-size: 12px; }
+    .zone { fill: none; stroke: var(--border-strong); stroke-width: 0.75; }
+    .chip { transition: transform .35s ease; }
+    @media (prefers-reduced-motion: reduce) {
+      .chip { transition: none; }
+    }
+    .btn { cursor: pointer; }
+    .btn rect {
+      fill: transparent;
+      stroke: var(--border-strong);
+      stroke-width: 0.75;
+      transition: fill 0.15s ease;
+    }
+    .btn:hover rect { fill: var(--bg-neutral); }
+    .btn text { fill: var(--text-primary); font-size: 14px; pointer-events: none; }
+    .opt-active rect { fill: var(--bg-accent) !important; stroke: var(--text-primary); }
+    .opt-active text { font-weight: 500; }
+    .status { fill: var(--text-primary); font-size: 15px; font-weight: 500; }
+    .ev { fill: var(--text-secondary); font-size: 14px; }
+    .tbl-th { fill: var(--text-primary); font-size: 13px; font-weight: 500; }
+    .tbl-td { fill: var(--text-secondary); font-size: 13px; }
+  </style>
+
+  <rect id="page-bg" class="page-bg" x="0" y="0" width="680" height="492" />
+  <text class="h1" x="14" y="30">More workers than cores: the cores get shared</text>
+
+  <g transform="translate(0, 36)">
+    <text class="th" x="14" y="30">Job queue</text>
+    <rect class="zone" x="14" y="40" width="140" height="190" rx="8" />
+
+    <text class="th" x="186" y="30">Worker processes</text>
+
+    <text class="th" x="506" y="30">CPU cores (4)</text>
+    <rect class="zone" x="506" y="40" width="160" height="130" rx="8" />
+
+    <text class="th" x="506" y="190">Done</text>
+    <rect class="zone" x="506" y="198" width="160" height="150" rx="8" />
+
+    <g id="wk"></g>
+    <g id="cores"></g>
+    <g id="jobs"></g>
+  </g>
+
+  
+  <g transform="translate(14, 400)">
+    <text x="0" y="14" dominant-baseline="central" style="fill:var(--text-secondary);font-size:14px">Workers in the pool</text>
+
+    <g id="n-2" class="btn" role="button" tabindex="0" transform="translate(134, 0)">
+      <rect x="0" y="0" width="32" height="28" rx="6" />
+      <text x="16" y="14" text-anchor="middle" dominant-baseline="central">2</text>
+    </g>
+    <g id="n-4" class="btn opt-active" role="button" tabindex="0" transform="translate(170, 0)">
+      <rect x="0" y="0" width="32" height="28" rx="6" />
+      <text x="16" y="14" text-anchor="middle" dominant-baseline="central">4</text>
+    </g>
+    <g id="n-8" class="btn" role="button" tabindex="0" transform="translate(206, 0)">
+      <rect x="0" y="0" width="32" height="28" rx="6" />
+      <text x="16" y="14" text-anchor="middle" dominant-baseline="central">8</text>
+    </g>
+    <g id="n-12" class="btn" role="button" tabindex="0" transform="translate(242, 0)">
+      <rect x="0" y="0" width="34" height="28" rx="6" />
+      <text x="17" y="14" text-anchor="middle" dominant-baseline="central">12</text>
+    </g>
+
+    
+    <g id="ov" role="checkbox" tabindex="0" transform="translate(290, 0)" style="cursor:pointer">
+      <rect x="0" y="0" width="182" height="28" fill="transparent" />
+      <rect id="ov-box" x="0" y="6" width="16" height="16" rx="4" fill="transparent" stroke="var(--border-strong)" stroke-width="1" />
+      <path id="ov-check" d="M3.5 14.5 L6.5 17.5 L12.5 11" fill="none" stroke="var(--text-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0" />
+      <text x="23" y="14" dominant-baseline="central" style="fill:var(--text-secondary);font-size:14px;pointer-events:none">Add switching overhead</text>
+    </g>
+
+    <g id="replay" class="btn" role="button" tabindex="0" transform="translate(486, 0)">
+      <rect x="0" y="0" width="66" height="28" rx="8" />
+      <text x="33" y="14" text-anchor="middle" dominant-baseline="central">Replay</text>
+    </g>
+    <g id="pp" class="btn" role="button" tabindex="0" transform="translate(560, 0)">
+      <rect x="0" y="0" width="64" height="28" rx="8" />
+      <text id="pp-lbl" x="32" y="14" text-anchor="middle" dominant-baseline="central">Pause</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(14, 452)">
+    <text id="status" class="status" x="0" y="0"></text>
+    <text id="ev" class="ev" x="0" y="22"></text>
+    <g id="res" transform="translate(0, 46)"></g>
+  </g>
+
+  <script>
+    const NS = 'http://www.w3.org/2000/svg';
+    const D = [2, 1, 3, 2, 1, 2, 3, 1, 2, 2, 1, 3];
+    const C = 4, RATE = 1.6, BAR = 140;
+    const COL = {
+      q: ['#D3D1C7', '#2C2C2A'],
+      r: ['#AFA9EC', '#26215C'],
+      d: ['#5DCAA5', '#04342C']
+    };
+
+    let N = 4, ovChecked = false, queue, workers, done, t, last = null, paused = false, ev = '', results = {};
+
+    function mk(tag, at, par) {
+      const e = document.createElementNS(NS, tag);
+      for (const k in at) e.setAttribute(k, at[k]);
+      par.appendChild(e);
+      return e;
+    }
+
+    const wg = [];
+    for (let i = 0; i &lt; 12; i++) {
+      const g = mk('g', {}, document.getElementById('wk'));
+      mk('rect', { class: 'zone', x: 186, y: 40 + i * 26, width: 304, height: 24, rx: 6 }, g);
+      const l = mk('text', { class: 'ts', x: 194, y: 52 + i * 26, 'dominant-baseline': 'central' }, g);
+      l.textContent = 'W' + (i + 1);
+      const bgBar = mk('rect', { x: 274, y: 46 + i * 26, width: BAR, height: 12, rx: 3 }, g);
+      bgBar.style.fill = 'var(--border)';
+      const bar = mk('rect', { x: 274, y: 46 + i * 26, width: 0, height: 12, rx: 3, fill: '#7F77DD' }, g);
+      const sp = mk('text', { class: 'ts', x: 424, y: 52 + i * 26, 'dominant-baseline': 'central' }, g);
+      wg.push({ g, bar, sp });
+    }
+
+    const cg = [];
+    for (let c = 0; c &lt; C; c++) {
+      const x = 514 + (c % 2) * 74, y = 50 + Math.floor(c / 2) * 60;
+      const g = mk('g', {}, document.getElementById('cores'));
+      const r = mk('rect', { x, y, width: 68, height: 50, rx: 8, class: 'zone' }, g);
+      r.style.fill = 'var(--bg-neutral)';
+      const a = mk('text', { class: 'th', x: x + 34, y: y + 18, 'text-anchor': 'middle', 'dominant-baseline': 'central' }, g);
+      a.textContent = 'core ' + (c + 1);
+      const b = mk('text', { class: 'ts', x: x + 34, y: y + 35, 'text-anchor': 'middle', 'dominant-baseline': 'central' }, g);
+      cg.push({ r, b });
+    }
+
+    const chips = [];
+    for (let j = 0; j &lt; 12; j++) {
+      const g = mk('g', { class: 'chip' }, document.getElementById('jobs'));
+      const r = mk('rect', { width: 44, height: 22, rx: 6 }, g);
+      const tx = mk('text', { class: 'th', x: 22, y: 11, 'text-anchor': 'middle', 'dominant-baseline': 'central' }, g);
+      tx.textContent = 'J' + (j + 1);
+      chips.push({ g, r, tx });
+    }
+
+    function busyCount() {
+      return workers.filter(w =&gt; w.job !== null).length;
+    }
+
+    function speed() {
+      const b = busyCount();
+      if (b &lt;= C) return 1;
+      let s = C / b;
+      if (ovChecked) s = s / (1 + 0.05 * (b - C));
+      return s;
+    }
+
+    function assign() {
+      const took = [];
+      workers.forEach((w, i) =&gt; {
+        if (w.job === null &amp;&amp; queue.length &gt; 0) {
+          w.job = queue.shift();
+          w.rem = D[w.job];
+          took.push('W' + (i + 1) + ' takes J' + (w.job + 1));
+        }
+      });
+      if (took.length &gt; 0 &amp;&amp; took.length &lt; 4) ev = took.join(', ');
+    }
+
+    function updateWorkerButtons() {
+      [2, 4, 8, 12].forEach(val =&gt; {
+        const el = document.getElementById('n-' + val);
+        if (val === N) el.classList.add('opt-active');
+        else el.classList.remove('opt-active');
+      });
+    }
+
+    function reset() {
+      updateWorkerButtons();
+      queue = D.map((_, i) =&gt; i);
+      workers = Array.from({ length: N }, () =&gt; ({ job: null, rem: 0 }));
+      done = [];
+      t = 0;
+      ev = '';
+      last = null;
+      wg.forEach((w, i) =&gt; {
+        w.g.style.opacity = i &lt; N ? 1 : 0;
+      });
+      assign();
+      render();
+    }
+
+    function render() {
+      chips.forEach((c, j) =&gt; {
+        let x, y, s;
+        const qi = queue.indexOf(j), di = done.indexOf(j), wi = workers.findIndex(w =&gt; w.job === j);
+        if (qi &gt;= 0) { x = 22 + (qi % 2) * 54; y = 50 + Math.floor(qi / 2) * 30; s = 'q'; }
+        else if (wi &gt;= 0) { x = 222; y = 41 + wi * 26; s = 'r'; }
+        else { x = 514 + (di % 3) * 50; y = 208 + Math.floor(di / 3) * 30; s = 'd'; }
+        c.g.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        c.r.setAttribute('fill', COL[s][0]);
+        c.tx.style.fill = COL[s][1];
+      });
+
+      const sp = speed(), b = busyCount();
+      workers.forEach((w, i) =&gt; {
+        wg[i].bar.setAttribute('width', w.job === null ? 0 : BAR * (1 - w.rem / D[w.job]));
+        wg[i].sp.textContent = w.job === null ? '' : Math.round(sp * 100) + '% speed';
+      });
+
+      cg.forEach((c, k) =&gt; {
+        c.r.style.fill = k &lt; Math.min(b, C) ? '#AFA9EC' : 'var(--bg-neutral)';
+        c.b.style.fill = k &lt; Math.min(b, C) ? '#26215C' : 'var(--text-secondary)';
+        c.b.textContent = b === 0 ? 'idle' : b &gt; C ? (b / C).toFixed(1) + ' workers' : (k &lt; b ? '1 worker' : 'idle');
+      });
+
+      const st = document.getElementById('status'), evEl = document.getElementById('ev');
+      if (done.length === 12) {
+        st.textContent = 'All 12 jobs done at t = ' + t.toFixed(1);
+        evEl.textContent = '';
+      } else {
+        st.textContent = 't = ' + t.toFixed(1) + '  |  ' + b + ' busy workers on ' + C + ' cores, each at ' + Math.round(sp * 100) + '% speed';
+        evEl.textContent = b &gt; C
+          ? 'Workers outnumber cores: the OS time-slices, so every job slows down.'
+          : (b === C ? 'Every worker has a core to itself: the cores are fully used.' : 'Fewer workers than cores: some cores sit idle.');
+      }
+    }
+
+    function showResults() {
+      const ks = Object.keys(results).map(Number).sort((a, b) =&gt; a - b);
+      const tb = document.getElementById('res');
+      const svgEl = document.documentElement;
+      const bgEl = document.getElementById('page-bg');
+
+      while (tb.firstChild) tb.removeChild(tb.firstChild);
+
+      if (ks.length === 0) {
+        svgEl.setAttribute('viewBox', '0 0 680 492');
+        bgEl.setAttribute('height', 492);
+        return;
+      }
+
+      const h1 = mk('text', { class: 'tbl-th', x: 0, y: 10 }, tb);
+      h1.textContent = 'Workers';
+      const h2 = mk('text', { class: 'tbl-th', x: 175, y: 10 }, tb);
+      h2.textContent = 'Finished at';
+
+      const line = mk('line', { x1: 0, y1: 16, x2: 260, y2: 16, 'stroke-width': 0.5 }, tb);
+      line.style.stroke = 'var(--border)';
+
+      ks.forEach((k, idx) =&gt; {
+        const y = 32 + idx * 22;
+        const c1 = mk('text', { class: 'tbl-td', x: 0, y }, tb);
+        c1.textContent = k + (k &gt; C ? ' (more than cores)' : '');
+        const c2 = mk('text', { class: 'tbl-td', x: 175, y }, tb);
+        c2.textContent = 't = ' + results[k].toFixed(1);
+      });
+
+      const totalH = 524 + ks.length * 22;
+      svgEl.setAttribute('viewBox', '0 0 680 ' + totalH);
+      bgEl.setAttribute('height', totalH);
+    }
+
+    function tick(now) {
+      if (last === null) last = now;
+      const dt = paused ? 0 : Math.min((now - last) / 1000, 0.1) * RATE;
+      last = now;
+      if (done.length &lt; 12) {
+        t += dt;
+        const s = speed();
+        workers.forEach(w =&gt; {
+          if (w.job !== null) {
+            w.rem -= dt * s;
+            if (w.rem &lt;= 0) {
+              done.push(w.job);
+              w.job = null;
+            }
+          }
+        });
+        assign();
+        if (done.length === 12) {
+          results[N] = t;
+          showResults();
+        }
+        render();
+      }
+      requestAnimationFrame(tick);
+    }
+
+    [2, 4, 8, 12].forEach(val =&gt; {
+      document.getElementById('n-' + val).addEventListener('click', () =&gt; {
+        N = val;
+        reset();
+      });
+    });
+
+    document.getElementById('ov').addEventListener('click', () =&gt; {
+      ovChecked = !ovChecked;
+      document.getElementById('ov').setAttribute('aria-checked', String(ovChecked));
+      document.getElementById('ov-check').style.opacity = ovChecked ? 1 : 0;
+      document.getElementById('ov-box').style.fill = ovChecked ? 'var(--bg-accent)' : 'transparent';
+      results = {};
+      showResults();
+      reset();
+    });
+
+    document.getElementById('replay').addEventListener('click', () =&gt; {
+      reset();
+      paused = false;
+      document.getElementById('pp-lbl').textContent = 'Pause';
+    });
+
+    document.getElementById('pp').addEventListener('click', () =&gt; {
+      paused = !paused;
+      document.getElementById('pp-lbl').textContent = paused ? 'Play' : 'Pause';
+    });
+
+    reset();
+    setTimeout(() =&gt; {
+      last = null;
+      requestAnimationFrame(tick);
+    }, 500);
+  </script>
+</svg>
