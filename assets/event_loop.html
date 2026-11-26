@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event loop: ready queue, thread, waiting</title><link rel="stylesheet" href="animation.css"></head>
+<body>
+<h1>The event loop, step by step</h1>
+<style>
+.chip{transition:transform .55s ease,opacity .4s ease}
+@media (prefers-reduced-motion:reduce){.chip{transition:none}}
+.zone{fill:none;stroke:var(--border-strong);stroke-width:0.5}
+</style>
+<svg viewBox="0 0 680 270" role="img">
+<title>Event loop with a ready queue, one running thread, a waiting area and finished tasks</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text class="th" x="20" y="36">Ready queue</text>
+<rect class="zone" x="20" y="44" width="240" height="70" rx="8"/>
+<text class="th" x="306" y="36">Thread</text>
+<rect id="thr" class="zone" x="306" y="44" width="110" height="70" rx="8"/>
+<text id="thrs" class="ts" x="361" y="106" text-anchor="middle" dominant-baseline="central">thread idle</text>
+<text class="th" x="442" y="36">Finished</text>
+<rect class="zone" x="442" y="44" width="210" height="70" rx="8"/>
+<text class="th" x="20" y="154">Waiting on IO (not using the thread)</text>
+<rect class="zone" x="20" y="164" width="632" height="80" rx="8"/>
+<line class="arr" x1="262" y1="79" x2="302" y2="79" marker-end="url(#arrow)"/>
+<line class="arr" x1="361" y1="116" x2="361" y2="162" marker-end="url(#arrow)"/>
+<text class="ts" x="372" y="140" dominant-baseline="central">await on unfinished IO: suspend</text>
+<line class="arr" x1="240" y1="162" x2="240" y2="116" marker-end="url(#arrow)"/>
+<text class="ts" x="230" y="140" text-anchor="end" dominant-baseline="central">response arrives</text>
+<g id="chips"></g>
+</svg>
+<div style="display:flex;align-items:center;gap:10px;margin:10px 0 0;flex-wrap:wrap">
+<button id="back">Back</button><button id="next">Next</button><button id="play">Pause</button><button id="reset">Reset</button>
+<span id="count" style="font-size:13px;color:var(--text-secondary)"></span>
+</div>
+<div style="margin:12px 0 0">
+<div id="ttl" style="font-size:15px;font-weight:500"></div>
+<div id="cap" style="color:var(--text-secondary);margin:2px 0 6px"></div>
+<div id="code" style="font-family:var(--font-mono);font-size:13px;background:var(--bg-neutral);border-radius:var(--radius);padding:6px 10px"></div>
+</div>
+<script>
+const NS='http://www.w3.org/2000/svg';
+const COL={main:['#D3D1C7','#2C2C2A'],A:['#5DCAA5','#04342C'],B:['#AFA9EC','#26215C'],C:['#F0997B','#4A1B0C']};
+const S=[
+{q:[],r:'main',w:[],d:[],t:'main is running',c:'It is the only thing on the thread. Nothing else exists yet.',k:'async def main():'},
+{q:['A','B','C'],r:'main',w:[],d:[],t:'create_task only queues',c:'Three tasks are scheduled. None has started, because main still holds the thread.',k:'tasks = [asyncio.create_task(work(n)) for n in "ABC"]'},
+{q:['A','B','C'],r:null,w:['main'],d:[],t:'main awaits and suspends',c:'main waits for tasks that are not done, so it steps aside. The thread is free.',k:'results = await asyncio.gather(*tasks)'},
+{q:['B','C'],r:'A',w:['main'],d:[],t:'The loop takes the front of the queue',c:'A gets the thread and runs its first lines.',k:'# in A: build the request and send it'},
+{q:['B','C'],r:null,w:['main','A'],d:[],t:'A awaits the network and suspends',c:'The request is out. A has nothing to do until the response arrives, so it leaves the thread.',k:'resp = await client.get(url)   # in A'},
+{q:['C'],r:'B',w:['main','A'],d:[],t:'Next in line: B',c:'B runs while A waits.',k:'# in B: build the request and send it'},
+{q:['C'],r:null,w:['main','A','B'],d:[],t:'B suspends too',c:'Two requests are now in flight at once.',k:'resp = await client.get(url)   # in B'},
+{q:[],r:'C',w:['main','A','B'],d:[],t:'Next in line: C',c:'C runs while A and B wait.',k:'# in C: build the request and send it'},
+{q:[],r:null,w:['main','A','B','C'],d:[],t:'Everyone is waiting: the thread is idle',c:'All three waits overlap. In the sequential version this time was spent three times over.',k:'# nothing is ready; the loop sleeps until a socket is readable'},
+{q:['A'],r:null,w:['main','B','C'],d:[],t:'A response arrives',c:'The loop notices the data, and A goes back on the ready queue.',k:'# A is ready again'},
+{q:[],r:'A',w:['main','B','C'],d:[],t:'A resumes where it left off',c:'It handles the response and returns.',k:'return parse(resp)   # in A'},
+{q:[],r:null,w:['main','B','C'],d:['A'],t:'A is finished',c:'The result is stored on the task object, so awaiting it again would just read it.',k:"A.result() == 'A'"},
+{q:['B'],r:null,w:['main','C'],d:['A'],t:'B response arrives',c:'B is back on the queue.',k:'# B is ready again'},
+{q:[],r:'B',w:['main','C'],d:['A'],t:'B resumes',c:'It handles its response and returns.',k:'return parse(resp)   # in B'},
+{q:[],r:null,w:['main','C'],d:['A','B'],t:'B is finished',c:'Two of three done.',k:"B.result() == 'B'"},
+{q:['C'],r:null,w:['main'],d:['A','B'],t:'C response arrives',c:'C is back on the queue.',k:'# C is ready again'},
+{q:[],r:'C',w:['main'],d:['A','B'],t:'C resumes',c:'It handles its response and returns.',k:'return parse(resp)   # in C'},
+{q:[],r:null,w:['main'],d:['A','B','C'],t:'All tasks are finished',c:'gather has what it was waiting for, so main can be woken.',k:'# every task passed to gather is done'},
+{q:['main'],r:null,w:[],d:['A','B','C'],t:'main is ready again',c:'It joins the queue like any other task.',k:'# main is ready again'},
+{q:[],r:'main',w:[],d:['A','B','C'],t:'main resumes with the results',c:'gather returns them in input order. Total time is about one round trip, not three.',k:"results == ['A', 'B', 'C']"}
+];
+const chips={};
+const layer=document.getElementById('chips');
+Object.keys(COL).forEach(id=>{
+  const g=document.createElementNS(NS,'g');g.setAttribute('class','chip');
+  const r=document.createElementNS(NS,'rect');
+  r.setAttribute('width',44);r.setAttribute('height',32);r.setAttribute('rx',6);
+  r.setAttribute('fill',COL[id][0]);r.setAttribute('stroke',COL[id][1]);r.setAttribute('stroke-width',0.5);
+  const t=document.createElementNS(NS,'text');
+  t.setAttribute('class','th');t.setAttribute('x',22);t.setAttribute('y',16);
+  t.setAttribute('text-anchor','middle');t.setAttribute('dominant-baseline','central');
+  t.style.fill=COL[id][1];t.textContent=id;
+  g.appendChild(r);g.appendChild(t);layer.appendChild(g);chips[id]=g;
+});
+function place(id,s){
+  let qi=s.q.indexOf(id),wi=s.w.indexOf(id),di=s.d.indexOf(id);
+  if(s.r===id)return[339,63,1];
+  if(qi>=0)return[28+qi*50,63,1];
+  if(wi>=0)return[28+wi*50,188,1];
+  if(di>=0)return[450+di*50,63,1];
+  return[28,63,0];
+}
+let i=0,timer=null;
+function render(){
+  const s=S[i];
+  Object.keys(chips).forEach(id=>{
+    const[p,q,v]=place(id,s);
+    chips[id].style.transform='translate('+p+'px,'+q+'px)';
+    chips[id].style.opacity=v;
+  });
+  const busy=s.r!==null;
+  document.getElementById('thr').style.fill=busy?'var(--bg-accent)':'var(--bg-neutral)';
+  document.getElementById('thrs').textContent=busy?'thread busy':'thread idle';
+  document.getElementById('ttl').textContent=s.t;
+  document.getElementById('cap').textContent=s.c;
+  document.getElementById('code').textContent=s.k;
+  document.getElementById('count').textContent='Step '+(i+1)+' of '+S.length;
+}
+function stop(){clearInterval(timer);timer=null;document.getElementById('play').textContent='Play';}
+function start(){
+  if(i>=S.length-1)i=0;
+  render();
+  document.getElementById('play').textContent='Pause';
+  timer=setInterval(()=>{if(i<S.length-1){i++;render();}else stop();},1700);
+}
+document.getElementById('next').onclick=()=>{stop();if(i<S.length-1)i++;render();};
+document.getElementById('back').onclick=()=>{stop();if(i>0)i--;render();};
+document.getElementById('reset').onclick=()=>{stop();i=0;render();};
+document.getElementById('play').onclick=()=>{timer===null?start():stop();};
+render();
+setTimeout(start,700);
+</script>
+</body></html>

@@ -1,0 +1,3171 @@
+{
+    "alloc_samples": 0,
+    "args": [
+        "conc_sleeper.py"
+    ],
+    "async_profile": true,
+    "combined_stacks": [
+        [
+            [
+                {
+                    "display_name": "[await] work (Task-4)",
+                    "filename_or_module": "/home/ritesh_saha/async_stuff/conc_sleeper.py",
+                    "ip": null,
+                    "kind": "py",
+                    "line": 5,
+                    "offset": null
+                }
+            ],
+            162
+        ],
+        [
+            [
+                {
+                    "display_name": "[await] work (Task-3)",
+                    "filename_or_module": "/home/ritesh_saha/async_stuff/conc_sleeper.py",
+                    "ip": null,
+                    "kind": "py",
+                    "line": 5,
+                    "offset": null
+                }
+            ],
+            76
+        ],
+        [
+            [
+                {
+                    "display_name": "[await] main (Task-1)",
+                    "filename_or_module": "/home/ritesh_saha/async_stuff/conc_sleeper.py",
+                    "ip": null,
+                    "kind": "py",
+                    "line": 11,
+                    "offset": null
+                }
+            ],
+            162
+        ]
+    ],
+    "combined_stacks_timeline": [
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.0,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.0,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.0,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.121351,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.121351,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.121351,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.124063,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.124063,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.124063,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.138182,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.138182,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.138182,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.144795,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.144795,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.144795,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.163226,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.163226,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.163226,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.175232,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.175232,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.175232,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.182049,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.182049,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.182049,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.251868,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.251868,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.251868,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.269388,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.269388,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.269388,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.277769,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.277769,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.277769,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.282545,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.282545,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.282545,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.29368,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.29368,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.29368,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.300253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.300253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.300253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.326401,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.326401,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.326401,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.335599,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.335599,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.335599,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.350786,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.350786,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.350786,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.365256,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.365256,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.365256,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.375753,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.375753,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.375753,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.397229,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.397229,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.397229,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.40219,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.40219,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.40219,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.409618,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.409618,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.409618,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.424303,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.424303,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.424303,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.445595,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.445595,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.445595,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.452817,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.452817,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.452817,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.4643,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.4643,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.4643,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.467201,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.467201,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.467201,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.47345,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.47345,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.47345,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.492283,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.492283,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.492283,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.501532,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.501532,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.501532,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.505886,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.505886,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.505886,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.508687,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.508687,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.508687,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.519079,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.519079,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.519079,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.545516,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.545516,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.545516,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.551603,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.551603,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.551603,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.553411,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.553411,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.553411,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.555979,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.555979,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.555979,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.560908,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.560908,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.560908,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.563037,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.563037,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.563037,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.586408,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.586408,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.586408,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.589802,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.589802,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.589802,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.592765,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.592765,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.592765,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.614457,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.614457,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.614457,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.619239,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.619239,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.619239,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.621902,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.621902,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.621902,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.626074,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.626074,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.626074,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.65517,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.65517,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.65517,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.679097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.679097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.679097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.697513,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.697513,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.697513,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.702597,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.702597,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.702597,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.709653,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.709653,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.709653,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.734148,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.734148,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.734148,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.75134,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.75134,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.75134,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.755768,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.755768,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.755768,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.776051,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.776051,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.776051,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.782253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.782253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.782253,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.787298,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.787298,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.787298,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.788576,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.788576,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.788576,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.797914,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.797914,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.797914,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.806394,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.806394,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.806394,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.817097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.817097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.817097,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.822136,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.822136,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.822136,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.826341,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.826341,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.826341,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.828421,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.828421,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.828421,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.864837,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.864837,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.864837,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.866291,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.866291,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.866291,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.877501,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.877501,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.877501,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.880052,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.880052,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.880052,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.905967,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.905967,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.905967,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.909352,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.909352,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.909352,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.923304,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.923304,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.923304,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.930538,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.930538,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.930538,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.938797,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.938797,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.938797,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.948685,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.948685,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.948685,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.952512,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.952512,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.952512,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.954101,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 1,
+            "t_sec": 0.954101,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.954101,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.980343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.980343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 0.997787,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 0.997787,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.025682,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.025682,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.058134,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.058134,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.073398,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.073398,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.075621,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.075621,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.077536,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.077536,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.080175,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.080175,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.083232,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.083232,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.093767,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.093767,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.111456,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.111456,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.11796,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.11796,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.122331,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.122331,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.126609,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.126609,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.135458,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.135458,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.139856,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.139856,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.143849,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.143849,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.149464,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.149464,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.204506,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.204506,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.211462,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.211462,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.212746,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.212746,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.214083,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.214083,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.216202,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.216202,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.262461,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.262461,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.264656,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.264656,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.26635,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.26635,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.279941,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.279941,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.284454,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.284454,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.290158,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.290158,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.318743,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.318743,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.323343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.323343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.332982,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.332982,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.344197,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.344197,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.351631,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.351631,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.355185,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.355185,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.357343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.357343,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.360005,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.360005,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.369473,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.369473,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.373412,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.373412,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.388189,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.388189,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.397191,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.397191,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.403083,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.403083,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.405767,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.405767,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.409985,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.409985,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.422183,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.422183,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.42785,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.42785,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.440077,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.440077,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.493696,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.493696,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.499561,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.499561,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.531179,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.531179,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.54259,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.54259,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.552336,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.552336,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.556448,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.556448,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.591757,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.591757,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.595832,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.595832,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.601421,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.601421,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.602247,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.602247,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.606015,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.606015,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.633803,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.633803,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.656491,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.656491,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.663368,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.663368,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.677111,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.677111,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.683486,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.683486,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.707202,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.707202,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.709687,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.709687,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.713299,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.713299,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.717774,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.717774,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.724186,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.724186,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.752864,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.752864,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.75691,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.75691,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.778792,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.778792,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.82101,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.82101,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.844783,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.844783,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.852741,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.852741,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.854986,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.854986,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.863519,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.863519,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.86522,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.86522,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.867565,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.867565,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.87476,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.87476,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.883847,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.883847,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.892205,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.892205,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.907482,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.907482,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.926175,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.926175,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.935226,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.935226,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.938105,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.938105,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 0,
+            "t_sec": 1.945923,
+            "thread_id": 123941836171200
+        },
+        {
+            "count": 1,
+            "stack_index": 2,
+            "t_sec": 1.945923,
+            "thread_id": 123941836171200
+        }
+    ],
+    "elapsed_time_sec": 2.003437042236328,
+    "entrypoint_dir": "/home/ritesh_saha/async_stuff",
+    "filename": "/home/ritesh_saha/async_stuff",
+    "files": {
+        "/home/ritesh_saha/async_stuff/conc_sleeper.py": {
+            "functions": [],
+            "imports": [],
+            "leaks": {},
+            "lines": [
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 1,
+                    "end_region_line": 1,
+                    "is_coroutine": false,
+                    "line": "import asyncio\n",
+                    "lineno": 1,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 1,
+                    "start_region_line": 1
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 2,
+                    "end_region_line": 2,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 2,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 2,
+                    "start_region_line": 2
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 3,
+                    "end_region_line": 3,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 3,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 3,
+                    "start_region_line": 3
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 6,
+                    "end_outermost_loop": 6,
+                    "end_region_line": 4,
+                    "is_coroutine": false,
+                    "line": "async def work(n: int) -\\u003e int:\n",
+                    "lineno": 4,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 4,
+                    "start_outermost_loop": 4,
+                    "start_region_line": 4
+                },
+                {
+                    "async_task_names": [
+                        "Task-3",
+                        "Task-4"
+                    ],
+                    "cpu_samples_list": [],
+                    "end_function_line": 6,
+                    "end_outermost_loop": 5,
+                    "end_region_line": 5,
+                    "is_coroutine": false,
+                    "line": "    await asyncio.sleep(n)\n",
+                    "lineno": 5,
+                    "memory_samples": [],
+                    "n_async_await_percent": 57.60931843903895,
+                    "n_async_concurrency_mean": 2.638655462184874,
+                    "n_async_concurrency_peak": 3,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 4,
+                    "start_outermost_loop": 5,
+                    "start_region_line": 5
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 6,
+                    "end_outermost_loop": 6,
+                    "end_region_line": 6,
+                    "is_coroutine": false,
+                    "line": "    return n * n\n",
+                    "lineno": 6,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 4,
+                    "start_outermost_loop": 6,
+                    "start_region_line": 6
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 7,
+                    "end_region_line": 7,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 7,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 7,
+                    "start_region_line": 7
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 8,
+                    "end_region_line": 8,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 8,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 8,
+                    "start_region_line": 8
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 12,
+                    "end_outermost_loop": 12,
+                    "end_region_line": 9,
+                    "is_coroutine": false,
+                    "line": "async def main():\n",
+                    "lineno": 9,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 9,
+                    "start_outermost_loop": 9,
+                    "start_region_line": 9
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 12,
+                    "end_outermost_loop": 10,
+                    "end_region_line": 10,
+                    "is_coroutine": false,
+                    "line": "    tasks = [work(i) for i in range(3)]\n",
+                    "lineno": 10,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 9,
+                    "start_outermost_loop": 10,
+                    "start_region_line": 10
+                },
+                {
+                    "async_task_names": [
+                        "Task-1"
+                    ],
+                    "cpu_samples_list": [],
+                    "end_function_line": 12,
+                    "end_outermost_loop": 11,
+                    "end_region_line": 11,
+                    "is_coroutine": false,
+                    "line": "    res = await asyncio.gather(*tasks, return_exceptions=True)\n",
+                    "lineno": 11,
+                    "memory_samples": [],
+                    "n_async_await_percent": 42.3906815609611,
+                    "n_async_concurrency_mean": 2.4691358024691374,
+                    "n_async_concurrency_peak": 3,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 9,
+                    "start_outermost_loop": 11,
+                    "start_region_line": 11
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 12,
+                    "end_outermost_loop": 12,
+                    "end_region_line": 12,
+                    "is_coroutine": false,
+                    "line": "    print(res)\n",
+                    "lineno": 12,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 9,
+                    "start_outermost_loop": 12,
+                    "start_region_line": 12
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 13,
+                    "end_region_line": 13,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 13,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 13
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 14,
+                    "end_region_line": 14,
+                    "is_coroutine": false,
+                    "line": "\n",
+                    "lineno": 14,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 14,
+                    "start_region_line": 14
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 16,
+                    "end_region_line": 15,
+                    "is_coroutine": false,
+                    "line": "if __name__ == '__main__':\n",
+                    "lineno": 15,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 15,
+                    "start_region_line": 15
+                },
+                {
+                    "async_task_names": [],
+                    "cpu_samples_list": [
+                        1312920.771474613,
+                        1312920.892825773,
+                        1312920.89553803,
+                        1312920.909656428,
+                        1312920.916269367,
+                        1312920.934700256,
+                        1312920.94670701,
+                        1312920.953523553,
+                        1312921.023342326,
+                        1312921.040862396,
+                        1312921.049243673,
+                        1312921.054020074,
+                        1312921.065154409,
+                        1312921.071728047,
+                        1312921.097875899,
+                        1312921.107073393,
+                        1312921.122260913,
+                        1312921.136730119,
+                        1312921.14722734,
+                        1312921.168703593,
+                        1312921.173665098,
+                        1312921.181092855,
+                        1312921.195777364,
+                        1312921.217069814,
+                        1312921.224291466,
+                        1312921.235775008,
+                        1312921.23867537,
+                        1312921.244924201,
+                        1312921.263757599,
+                        1312921.273006694,
+                        1312921.277360786,
+                        1312921.280161645,
+                        1312921.290554064,
+                        1312921.316990522,
+                        1312921.32307775,
+                        1312921.324885288,
+                        1312921.327453943,
+                        1312921.332383047,
+                        1312921.334512091,
+                        1312921.357882785,
+                        1312921.361276256,
+                        1312921.364239919,
+                        1312921.385931776,
+                        1312921.390713277,
+                        1312921.393376733,
+                        1312921.397548221,
+                        1312921.426644735,
+                        1312921.45057184,
+                        1312921.468987829,
+                        1312921.474072036,
+                        1312921.481127785,
+                        1312921.505622602,
+                        1312921.522814564,
+                        1312921.527242158,
+                        1312921.547525386,
+                        1312921.553727616,
+                        1312921.558772123,
+                        1312921.56005015,
+                        1312921.569388547,
+                        1312921.577868726,
+                        1312921.588571852,
+                        1312921.593611058,
+                        1312921.597815947,
+                        1312921.59989549,
+                        1312921.636311559,
+                        1312921.637765189,
+                        1312921.648975126,
+                        1312921.65152648,
+                        1312921.677441827,
+                        1312921.680826698,
+                        1312921.694778692,
+                        1312921.702012745,
+                        1312921.710271519,
+                        1312921.720159728,
+                        1312921.723986609,
+                        1312921.725575342,
+                        1312921.751817896,
+                        1312921.769261564,
+                        1312921.797156752,
+                        1312921.829608537,
+                        1312921.844872459,
+                        1312921.847095206,
+                        1312921.849010246,
+                        1312921.851649302,
+                        1312921.854706366,
+                        1312921.865242089,
+                        1312921.882931062,
+                        1312921.889434999,
+                        1312921.893805491,
+                        1312921.898083382,
+                        1312921.906932868,
+                        1312921.911331061,
+                        1312921.915323145,
+                        1312921.920938164,
+                        1312921.975980925,
+                        1312921.982936772,
+                        1312921.984220699,
+                        1312921.985557227,
+                        1312921.987676572,
+                        1312922.033935848,
+                        1312922.036131094,
+                        1312922.03782503,
+                        1312922.051415717,
+                        1312922.055929112,
+                        1312922.061632532,
+                        1312922.090218035,
+                        1312922.094817832,
+                        1312922.104456836,
+                        1312922.115671172,
+                        1312922.123105129,
+                        1312922.126659404,
+                        1312922.12881715,
+                        1312922.131479906,
+                        1312922.140947205,
+                        1312922.144886289,
+                        1312922.159664,
+                        1312922.16866519,
+                        1312922.174557415,
+                        1312922.177241671,
+                        1312922.18145926,
+                        1312922.193657117,
+                        1312922.199324537,
+                        1312922.211551595,
+                        1312922.265170926,
+                        1312922.27103595,
+                        1312922.302653717,
+                        1312922.314065058,
+                        1312922.323810463,
+                        1312922.32792235,
+                        1312922.363231795,
+                        1312922.367306781,
+                        1312922.372895999,
+                        1312922.373721916,
+                        1312922.377489996,
+                        1312922.405277982,
+                        1312922.427965261,
+                        1312922.434842706,
+                        1312922.448585196,
+                        1312922.45496033,
+                        1312922.478676331,
+                        1312922.481161983,
+                        1312922.484773559,
+                        1312922.489248954,
+                        1312922.495660289,
+                        1312922.524338794,
+                        1312922.528384379,
+                        1312922.550266241,
+                        1312922.592485032,
+                        1312922.616257733,
+                        1312922.624215701,
+                        1312922.626460849,
+                        1312922.634993829,
+                        1312922.636694665,
+                        1312922.639039914,
+                        1312922.646234466,
+                        1312922.655321858,
+                        1312922.663679934,
+                        1312922.678956156,
+                        1312922.697650051,
+                        1312922.706700142,
+                        1312922.709579202,
+                        1312922.717397367
+                    ],
+                    "end_function_line": 0,
+                    "end_outermost_loop": 16,
+                    "end_region_line": 16,
+                    "is_coroutine": false,
+                    "line": "    asyncio.run(main())\n",
+                    "lineno": 16,
+                    "memory_samples": [],
+                    "n_async_await_percent": 0.0,
+                    "n_async_concurrency_mean": 0.0,
+                    "n_async_concurrency_peak": 0.0,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0033931611159043785,
+                    "n_cpu_percent_c": 0.3494598933471503,
+                    "n_cpu_percent_python": 6.4368623384616095,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 16.26470231930853,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 93.21367776819123,
+                    "n_usage_fraction": 0,
+                    "start_function_line": 0,
+                    "start_outermost_loop": 16,
+                    "start_region_line": 16
+                }
+            ],
+            "percent_cpu_time": 100.0
+        }
+    },
+    "gpu": true,
+    "gpu_device": "GPU",
+    "growth_rate": 0.0,
+    "main_thread_id": 123941836171200,
+    "max_footprint_fname": null,
+    "max_footprint_lineno": null,
+    "max_footprint_mb": 0,
+    "max_footprint_python_fraction": 0,
+    "memory": true,
+    "memory_stacks": [],
+    "native_allocations_mb": 0,
+    "program": "/home/ritesh_saha/async_stuff/conc_sleeper.py",
+    "samples": [],
+    "stacks": [
+        [
+            [
+                "/home/ritesh_saha/async_stuff/conc_sleeper.py <module>:16;"
+            ],
+            {
+                "c_time": 0.051494739184232446,
+                "count": 162,
+                "cpu_samples": 1.0,
+                "python_time": 0.9485052608157676
+            }
+        ]
+    ],
+    "start_time_absolute": 1795686214.812768,
+    "start_time_perf": 1312920.725813649
+}

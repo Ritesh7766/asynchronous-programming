@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" role="img">
+<title>Semaphore limiting three tasks at a time</title><desc>Six tasks start together. Three enter the guarded block; three wait at the semaphore until slots free up.</desc>
+<rect x="0.5" y="0.5" width="639" height="279" rx="8" fill="#FFFFFF" stroke="#D3D1C7"/>
+<text x="20" y="22" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">asyncio.Semaphore(3): at most 3 tasks inside the block</text>
+<text x="20" y="53" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 1</text>
+<rect x="110" y="44" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<text x="20" y="81" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 2</text>
+<rect x="110" y="72" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<text x="20" y="109" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 3</text>
+<rect x="110" y="100" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<text x="20" y="137" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 4</text>
+<rect x="110" y="128" width="0" height="18" rx="3" fill="#EF9F27" opacity="0.9"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<rect x="310" y="128" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.3333;0.6667;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<text x="20" y="165" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 5</text>
+<rect x="110" y="156" width="0" height="18" rx="3" fill="#EF9F27" opacity="0.9"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<rect x="310" y="156" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.3333;0.6667;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<text x="20" y="193" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">task 6</text>
+<rect x="110" y="184" width="0" height="18" rx="3" fill="#EF9F27" opacity="0.9"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.0000;0.3333;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<rect x="310" y="184" width="0" height="18" rx="3" fill="#7F77DD" opacity="1.0"><animate attributeName="width" values="0;0;200;200" keyTimes="0;0.3333;0.6667;1" dur="6.0s" repeatCount="indefinite"/></rect>
+<line x1="110" y1="38" x2="110" y2="214" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="3 3"><animateTransform attributeName="transform" type="translate" values="0 0;400 0;400 0" keyTimes="0;0.6667;1" dur="6.0s" repeatCount="indefinite"/></line>
+<text x="316" y="228" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start" dominant-baseline="central" fill="#2C2C2A" opacity="0">slots free up, waiting tasks enter<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.3333;0.3533;1" dur="6.0s" repeatCount="indefinite"/></text>
+<text x="516" y="53" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start" dominant-baseline="central" fill="#2C2C2A" opacity="0">all done at 2 s<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.6667;0.6867;1" dur="6.0s" repeatCount="indefinite"/></text>
+<rect x="20" y="256" width="12" height="12" rx="2" fill="#7F77DD" opacity="1"/>
+<text x="38" y="262" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">Inside the block (e.g. downloading)</text>
+<rect x="305" y="256" width="12" height="12" rx="2" fill="#EF9F27" opacity="0.9"/>
+<text x="323" y="262" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="central" fill="#2C2C2A">Suspended at async with sem</text>
+</svg>
