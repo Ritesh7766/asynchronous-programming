@@ -32,27 +32,13 @@ Also: [cheatsheet.md](cheatsheet.md) (everything on one page) and [exercises.md]
 
 ## Interactive animations
 
-Open these in a browser (they need `assets/animation.css` next to them):
+Open these directly in a browser to use the interactive controls:
 
-- [event_loop.html](assets/event_loop.html): ready queue, thread and waiting area, step by step
-- [process_pool.html](assets/process_pool.html): jobs, one shared queue, a pool of workers
-- [process_pool_vs_cores.html](assets/process_pool_vs_cores.html): what happens when workers outnumber cores
+- [event_loop.svg](assets/event_loop.svg): ready queue, thread and waiting area, step by step
+- [process_pool.html](assets/process_pool.html): jobs, one shared queue, a pool of workers *(requires `assets/animation.css`)*
+- [process_pool_vs_cores.svg](assets/process_pool_vs_cores.svg): what happens when workers outnumber cores
 
 ## Running
 
 ```bash
 python3 01_concurrency_basics/concurrent_sleep.py
-```
-
-Python 3.11+ (`asyncio.timeout`, `TaskGroup`, `except*`).
-
-## Pitfalls that cost time
-
-- `work(1)` alone does nothing. Await it or make it a task.
-- Awaiting inside the loop makes it sequential: `for x in xs: await f(x)`.
-- A blocking call (`time.sleep`, `requests.get`) freezes every task.
-- `to_thread(fn(x))` calls `fn` immediately. Write `to_thread(fn, x)`.
-- Don't swallow `CancelledError`; re-raise it.
-- `return_exceptions=True` hides errors unless you inspect the results.
-- Never name a file after a standard-library module (`queue.py`, `asyncio.py`, `time.py`): it shadows the real one and breaks imports in unrelated code.
-# asynchronous-programming
